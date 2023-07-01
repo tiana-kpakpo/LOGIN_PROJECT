@@ -1,0 +1,222 @@
+body {
+    /* align-self: */
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+body.dark {
+    background-color: #292c35;
+}
+
+/* #9b59b6 */
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #111;
+    width: 42px;
+    height: 17px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logo {
+    color: brown;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;
+    /* align-items: center; */
+}
+.login-body{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:#d8d7da;
+    position: relative;
+    z-index: 10;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.form-content {
+    max-width: 900px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+}
+
+input[mask-type=alpha],
+input [mask-type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.btn-login {
+    background-color:rgba(196, 24, 24, 0.733);
+    color: white;
+}
+
+.btn-signup {
+    background-color: black;
+    color: #ccc;
+}
+
+.login-background {
+   display: none;
+   flex:1
+
+   
+
+}
+
+.bg-image {
+    max-width: 100%;
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 0px;
+    border-radius: 5px;
+    border: 1px solid rgba(196, 24, 24, 0.733) ;
+    background-color: white;
+    box-shadow: -1px 4px 9px -6px rgba(0,0,0,0.33);
+    -webkit-box-shadow: -1px 4px 9px -6px rgba(0,0,0,0.33);
+    -moz-box-shadow: -1px 4px 9px -6px rgba(0,0,0,0.33);
+
+    
+}
+
+button[type="submit"]:hover {}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* DARK MODE */
+
+body.dark .form-container {
+    background-color: #0c0c0e;
+}
+
+body.dark .logo {
+    color: white;
+}
+
+body.dark .btn-signup {
+    background-color: white;
+    color: #111;
+}
+
+@media (min-width: 640px){
+.form-container {
+    justify-content: center;
+ 
+}
+}
+
+@media (min-width: 768px){
+.form-container {
+    flex: none;
+    max-width: 24rem;
+  
+    margin-right: auto;
+    margin-left: auto;
+}
+}
+
+@media (min-width: 1024px){
+    .login-background{
+        flex: 1 ;
+        display: block;
+    }
+}
+
+
+/* /@media only screen and (max-width: 600px) {
+    .login-background {
+        display: none;
+    }
+} */
+
+/* @media only screen and (max-width: 600px) {
+    .form-content {
+       display: none;
+    }
+} */
