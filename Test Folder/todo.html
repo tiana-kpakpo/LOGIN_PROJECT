@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Self Test</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(112, 110, 236);
+        }
+
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.9rem;
+            width: 50%;
+            height: 50%;
+            background-color: wheat;
+
+        }
+
+        .input {
+            display: flex;
+            height: 10%;
+        }
+    </style>
+
+    <div class="card">
+
+        <div class="card-container">
+            <h1>Add an Item</h1>
+            <div class="input">
+                <input type="text" id="input-item" placeholder="enter item here">
+                <button class="butt">add</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+
+
+
+        // const butt = document.querySelector("butt").addEventListener('click', () => {
+        //     console.log("grabbed")
+        // })
+        const inputField = document.querySelector("input")
+        const addButton = document.querySelector("button");
+        addButton.addEventListener('click', async () => {
+            console.log("Button clicked");
+            const inputValue = inputField.value
+            console.log(inputValue)
+
+            if (inputValue.trim() === " " || inputValue === null) {
+                alert('This field can not be empty')
+                return;
+            }
+
+            inputField.value = " ";
+
+            const url = "http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/create-item"
+
+            const postData = {
+                name: inputValue
+            }
+
+
+            try {
+                const response = await fetch('url', {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": 'application/json'
+                    },
+                    body: JSON.stringify(postData)
+
+                })
+
+                if (response.status == 200 || response.status == 201) {
+                    const result = await response.json();
+                    console.log(result)
+                    const resContainer = document.createElement('div')
+                }
+
+            } catch (error) {
+                console.error('Error')
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>

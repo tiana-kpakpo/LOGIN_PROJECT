@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0.2rem 0 0.2rem 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            width: 350px;
+            height: 30px;
+            border: none;
+            border-bottom: 2px solid;
+        }
+
+        input:focus {
+         border: none;    
+            
+        }
+
+        button {
+            margin-top: 2rem;
+            width: 10%;
+            background-color: rgb(105, 209, 105);
+            border-radius: 0.5rem;
+            height: 30px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: rgb(99, 216, 99);
+        }
+    </style>
+    <div class="wrapper">
+        <form action="#">
+            <label for="Email"> Email</label>
+            <input type="text" placeholder="please enter an email">
+        </form>
+        <button>submit</button>
+    </div>
+</body>
+
+</html>

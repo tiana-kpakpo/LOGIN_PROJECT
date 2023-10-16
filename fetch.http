@@ -1,0 +1,8 @@
+# GET http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/items
+
+POST http://kojoyeboah53i-d962a2da663c.herokuapp.com/api/ordabl/create-item
+Content-Type: 'application/json'
+
+{
+    "name" : "wash at 2pm"
+}
